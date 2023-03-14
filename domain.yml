@@ -1,0 +1,83 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thanks
+  - help
+  - inform
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - medicine
+  - medical_department
+  - medical_hospital
+
+entities:
+  - disease
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello! How can I help you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  - text: "I am a auto anwers hospital assistant"
+
+  utter_medical_department:
+  - text: "You can go to polyclinic for cold"
+
+  utter_medical_hospital:
+  - text: "Any hospital can handle stomachache"
+
+  utter_medicine_cold:
+  - text: "For cold, you can take paracetamol or ibuprofen to relieve the symptoms. Make sure to get plenty of rest and drink plenty of fluids."
+  utter_medicine_constipation:
+  - text: "For constipation, you can take laxatives or stool softeners. It's also important to eat a healthy, high-fiber diet and stay hydrated."
+  utter_medicine_stomachache:
+  - text: "For stomachache, you can take antacids or medications that relieve stomach cramps. Avoid spicy or fatty foods, and try to rest."
+  utter_medicine_sneezing:
+  - text: "For sneezing, you can take antihistamines or decongestants to relieve the symptoms of allergies or colds."
+  utter_medicine_hbp:
+  - text: "For high blood pressure, your parents should consult a doctor for the best treatment options. Prescription medications such as ACE inhibitors or diuretics may be recommended."
+  utter_medicine_fever:
+  - text: "For fever, you can take acetaminophen or ibuprofen to lower your body temperature. It's important to stay hydrated and rest until you feel better."
+  utter_medicine_weightloss:
+  - text: "For weight loss, it's important to focus on a healthy diet and regular exercise. Consult a doctor or a nutritionist for personalized advice."
+
+actions:
+  - utter_goodbye
+  - utter_greet
+  - utter_iamabot
+  - utter_cheer_up
+  - utter_happy
+  - utter_did_that_help
+  - utter_medical_department
+  - utter_medical_hospital
+  - utter_medicine_cold
+  - utter_medicine_constipation
+  - utter_medicine_stomachache
+  - utter_medicine_sneezing
+  - utter_medicine_hbp
+  - utter_medicine_fever
+  - utter_medicine_weightloss
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

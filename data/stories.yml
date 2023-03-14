@@ -1,0 +1,96 @@
+version: "3.1"
+
+stories:
+
+- story: greet, happy and goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+
+
+# - story: recommend medicine
+#   steps:
+#   - intent: medicine
+#   - action: utter_medicine
+
+- story: recommend medical department
+  steps:
+  - intent: medical_department
+  - action: utter_medical_department
+
+- story: recommend hospital
+  steps:
+  - intent: medical_hospital
+  - action: utter_medical_hospital
+
+- story: recommend medicine for cold
+  steps:
+  - intent: medicine
+    entities:
+    - disease: cold
+  - action: utter_medicine_cold
+
+- story: recommend medicine for constipation
+  steps:
+  - intent: medicine
+    entities:
+    - disease: constipated
+  - action: utter_medicine_constipation
+
+- story: recommend medicine for stomachache
+  steps:
+  - intent: medicine
+    entities:
+    - disease: stomachache
+  - action: utter_medicine_stomachache
+
+- story: recommend medicine for sneezing
+  steps:
+  - intent: medicine
+    entities:
+    - disease: sneezing all the time
+  - action: utter_medicine_sneezing
+
+- story: recommend medicine for high blood pressure
+  steps:
+  - intent: medicine
+    entities:
+    - disease: high blood pressure
+  - action: utter_medicine_hbp
+
+- story: recommend medicine for fever
+  steps:
+  - intent: medicine
+    entities:
+    - disease: feverish
+  - action: utter_medicine_fever
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
